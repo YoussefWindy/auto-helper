@@ -1,0 +1,525 @@
+[
+    {
+        "Name": "2023 Ford F-250 Lariat",
+        "Price": "$77,376",
+        "URL": "https://cars.com/vehicledetail/ebc36438-7633-4ac9-b7e9-e9add7fc76f7/?attribution_type=isa",
+        "Mileage": "22,206 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Hebert's Town & Country Ford",
+            "Rating": "5.0",
+            "Review Count": "22 reviews",
+            "Location": "  Minden, LA"
+        },
+        "Specifications": {
+            "Exterior color": " Iconic Silver Metallic ",
+            "Interior color": "Black Onyx ",
+            "Drivetrain": "Four-wheel Drive ",
+            "MPG": " –",
+            "Fuel type": "Diesel ",
+            "Transmission": "10-Speed Automatic",
+            "Engine": "6.7L V8 32V DDI OHV Turbo Diesel",
+            "VIN": " 1FT8W2BT1PED49136 ",
+            "Stock #": " F24039A ",
+            "Mileage": " 22,206 mi. "
+        }
+    },
+    {
+        "Name": "2015 Volkswagen Eos Komfort Edition",
+        "Price": "$14,961",
+        "URL": "https://cars.com/vehicledetail/940aaa7a-beb8-430b-8378-5c004008300b/",
+        "Mileage": "61,861 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "West Herr Chevrolet of East Syracuse",
+            "Rating": "4.6",
+            "Review Count": "549 reviews",
+            "Location": "  East Syracuse, NY"
+        },
+        "Specifications": {
+            "Exterior color": " Deep Black Pearl ",
+            "Interior color": "Cornsilk Beige ",
+            "Drivetrain": "Front-wheel Drive ",
+            "MPG": "   22–30    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "6-Speed DSG Automatic with Tiptronic",
+            "Engine": "2L I-4 gasoline direct injection, DOHC, variable valve control,",
+            "VIN": " WVWBW8AH6FV002020 ",
+            "Stock #": " CS24P130 ",
+            "Mileage": " 61,861 mi. "
+        }
+    },
+    {
+        "Name": "2015 Porsche 911 Carrera",
+        "Price": "$65,995",
+        "URL": "https://cars.com/vehicledetail/06bcbc3f-f2c1-4535-991c-43f23a99a1cf/",
+        "Mileage": "46,672 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "AutoNation USA San Antonio",
+            "Rating": "4.7",
+            "Review Count": "211 reviews",
+            "Location": "  San Antonio, TX"
+        },
+        "Specifications": {
+            "Exterior color": " Agate Gray Metallic ",
+            "Interior color": "Black ",
+            "Drivetrain": "Rear-wheel Drive ",
+            "MPG": "   19–27    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "7-Speed Automatic with Auto-Shift",
+            "Engine": "3.4L H6 24V GDI DOHC",
+            "VIN": " WP0AA2A93FS100214 ",
+            "Stock #": " FS100214 ",
+            "Mileage": " 46,672 mi. "
+        }
+    },
+    {
+        "Name": "2018 Subaru Impreza 2.0i",
+        "Price": "$14,985",
+        "URL": "https://cars.com/vehicledetail/69b3a232-1312-49b7-8fff-e2257a108303/",
+        "Mileage": "103,527 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Global Auto Brokers",
+            "Rating": null,
+            "Review Count": "0 reviews",
+            "Location": "  Wichita, KS"
+        },
+        "Specifications": {
+            "Exterior color": " White ",
+            "Interior color": "Black ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   28–37    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "Automatic",
+            "Engine": "2L H-4 gasoline direct injection, DOHC, variable valve control,",
+            "VIN": " 4S3GTAA66J3738917 ",
+            "Stock #": " G0767 ",
+            "Mileage": " 103,527 mi. "
+        }
+    },
+    {
+        "Name": "1988 Ford Bronco II ",
+        "Price": "$10,992",
+        "URL": "https://cars.com/vehicledetail/cbfaa302-b668-4b77-ab0c-f9c37315db8a/",
+        "Mileage": "218,553 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Central Ford",
+            "Rating": "4.0",
+            "Review Count": "103 reviews",
+            "Location": "  South Gate, CA"
+        },
+        "Specifications": {
+            "Exterior color": " Brown ",
+            "Interior color": "Brown ",
+            "Drivetrain": "Rear-wheel Drive ",
+            "MPG": "   0–0    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "Manual",
+            "Engine": "2.9L V6",
+            "VIN": " 1FMCU12T9JUD80010 ",
+            "Stock #": " C9358 ",
+            "Mileage": " 218,553 mi. "
+        }
+    },
+    {
+        "Name": "2022 Jeep Grand Cherokee Laredo",
+        "Price": "$34,808",
+        "URL": "https://cars.com/vehicledetail/a6d78505-1088-4e1d-84b1-1e00129c512a/",
+        "Mileage": "44,185 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "BMW of Meridian",
+            "Rating": "4.9",
+            "Review Count": "207 reviews",
+            "Location": "  Meridian, MS"
+        },
+        "Specifications": {
+            "Exterior color": " Metallic ",
+            "Interior color": "Black ",
+            "Drivetrain": "Four-wheel Drive ",
+            "MPG": " –",
+            "Fuel type": "Gasoline ",
+            "Transmission": "8-Speed Automatic",
+            "Engine": "3.6L V6 24V MPFI DOHC",
+            "VIN": " 1C4RJHAG3N8604357 ",
+            "Stock #": " P20069 ",
+            "Mileage": " 44,185 mi. "
+        }
+    },
+    {
+        "Name": "2019 Audi S4 3.0T Premium Plus",
+        "Price": "$32,740",
+        "URL": "https://cars.com/vehicledetail/579c0256-b213-4389-8c84-faa0e3b5606f/",
+        "Mileage": "52,629 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "AutoNation Honda Lewisville",
+            "Rating": "4.4",
+            "Review Count": "1,978 reviews",
+            "Location": "  Lewisville, TX"
+        },
+        "Specifications": {
+            "Exterior color": " Tango Red Metallic ",
+            "Interior color": "Rotor Gray ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   21–30    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "8-Speed Automatic",
+            "Engine": "3.0L V6 24V GDI DOHC Turbo",
+            "VIN": " WAUB4AF40KA068421 ",
+            "Stock #": " KA068421 ",
+            "Mileage": " 52,629 mi. "
+        }
+    },
+    {
+        "Name": "2017 Ford Taurus SHO",
+        "Price": "$29,900",
+        "URL": "https://cars.com/vehicledetail/dcca8400-72aa-45d3-a5c9-55cdbb651241/",
+        "Mileage": "31,732 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Marchese Ford, Inc.",
+            "Rating": null,
+            "Review Count": "13 reviews",
+            "Location": "  New Lebanon, NY"
+        },
+        "Specifications": {
+            "Exterior color": " Red ",
+            "Interior color": "Black ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   16–24    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "6-Speed Automatic",
+            "Engine": "3.5L V6 24V GDI DOHC Twin Turbo",
+            "VIN": " 1FAHP2KT4HG112150 ",
+            "Stock #": " 25410A ",
+            "Mileage": " 31,732 mi. "
+        }
+    },
+    {
+        "Name": "2022 Lexus LS 500h Base",
+        "Price": "$84,120",
+        "URL": "https://cars.com/vehicledetail/28002a74-2018-4412-9d46-1196160cee32/",
+        "Mileage": "12,437 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Len Stoler Lexus",
+            "Rating": "4.9",
+            "Review Count": "428 reviews",
+            "Location": "  Owings Mills, MD"
+        },
+        "Specifications": {
+            "Exterior color": " Atomic Silver ",
+            "Interior color": "Black ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   22–29    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "Variable",
+            "Engine": "3.5L V-6 gasoline direct injection, DOHC, VVT-iW/VVT-i variable",
+            "VIN": " JTHGYLGF9N5002244 ",
+            "Stock #": " 98867 ",
+            "Mileage": " 12,437 mi. "
+        }
+    },
+    {
+        "Name": "2022 Subaru BRZ Limited",
+        "Price": "$29,997",
+        "URL": "https://cars.com/vehicledetail/31bbd9c3-ac59-4572-b5a1-f9ed9ca50353/",
+        "Mileage": "12,302 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Johnson Subaru of Cary",
+            "Rating": "4.9",
+            "Review Count": "339 reviews",
+            "Location": "  Cary, NC"
+        },
+        "Specifications": {
+            "Exterior color": " Crystal Black Silica ",
+            "Interior color": "Black ",
+            "Drivetrain": "Rear-wheel Drive ",
+            "MPG": "   20–27    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "6-Speed Manual",
+            "Engine": "2.4L H4 16V PDI DOHC",
+            "VIN": " JF1ZDBE10N9701218 ",
+            "Stock #": " SB45951A ",
+            "Mileage": " 12,302 mi. "
+        }
+    },
+    {
+        "Name": "2013 Hyundai Genesis 3.8",
+        "Price": "$11,991",
+        "URL": "https://cars.com/vehicledetail/c37c752b-35af-43a7-a713-9fa3f8b38cac/",
+        "Mileage": "48,767 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "AutoNation Toyota Las Vegas",
+            "Rating": "4.6",
+            "Review Count": "3,588 reviews",
+            "Location": "  Las Vegas, NV"
+        },
+        "Specifications": {
+            "Exterior color": " Platinum Metallic ",
+            "Interior color": "Cashmere ",
+            "Drivetrain": "Rear-wheel Drive ",
+            "MPG": "   18–28    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "8-Speed Automatic",
+            "Engine": "3.8L V6 24V GDI DOHC",
+            "VIN": " KMHGC4DD4DU237465 ",
+            "Stock #": " DU237465 ",
+            "Mileage": " 48,767 mi. "
+        }
+    },
+    {
+        "Name": "2007 Pontiac Solstice Base",
+        "Price": "$14,360",
+        "URL": "https://cars.com/vehicledetail/b202d5a0-8c3d-4722-b8b8-7cb76f0ded92/",
+        "Mileage": "28,488 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Lighthouse Buick GMC",
+            "Rating": "4.8",
+            "Review Count": "282 reviews",
+            "Location": "  Morton, IL"
+        },
+        "Specifications": {
+            "Exterior color": " Cool (Liquid Silver Metallic) ",
+            "Interior color": "Ebony ",
+            "Drivetrain": "Rear-wheel Drive ",
+            "MPG": "   22–28    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "5-Speed Manual",
+            "Engine": "Ecotec 2.4L I-4 DOHC, variable valve control, regular unleaded,",
+            "VIN": " 1G2MB35B57Y112459 ",
+            "Stock #": " P1462 ",
+            "Mileage": " 28,488 mi. "
+        }
+    },
+    {
+        "Name": "2018 Lexus LS 500 Base",
+        "Price": "$46,441",
+        "URL": "https://cars.com/vehicledetail/2e6bba8d-8ed2-4f90-8f81-15b5ac8fb3fa/",
+        "Mileage": "20,230 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Watermark Honda & Bluegrass BMW",
+            "Rating": null,
+            "Review Count": "45 reviews",
+            "Location": "  Paducah, KY"
+        },
+        "Specifications": {
+            "Exterior color": " Caviar ",
+            "Interior color": "Black ",
+            "Drivetrain": "Rear-wheel Drive ",
+            "MPG": "   19–30    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "10-Speed Automatic",
+            "Engine": "3.5L V6 24V PDI DOHC Twin Turbo",
+            "VIN": " JTHB51FF2J5004243 ",
+            "Stock #": " B40143A ",
+            "Mileage": " 20,230 mi. "
+        }
+    },
+    {
+        "Name": "2019 Audi e-tron Prestige",
+        "Price": "$30,594",
+        "URL": "https://cars.com/vehicledetail/3e34f188-343c-4352-945d-9cc96e358d1d/",
+        "Mileage": "33,577 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Wagner Cadillac",
+            "Rating": null,
+            "Review Count": "28 reviews",
+            "Location": "  Tyler, TX"
+        },
+        "Specifications": {
+            "Exterior color": " Brilliant Black ",
+            "Interior color": "Okapi Brown ",
+            "Drivetrain": "All-wheel Drive ",
+            "Transmission": "1-Speed Automatic",
+            "Engine": "Electric",
+            "VIN": " WA1VABGEXKB017874 ",
+            "Stock #": " XKB017874 ",
+            "Mileage": " 33,577 mi. "
+        }
+    },
+    {
+        "Name": "2013 Bentley Continental GTC V8",
+        "Price": "$67,590",
+        "URL": "https://cars.com/vehicledetail/35ec4530-25f9-4a12-895d-7bd8eb346402/",
+        "Mileage": "25,242 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "John Elway Chevrolet - Broadway",
+            "Rating": "3.9",
+            "Review Count": "527 reviews",
+            "Location": "  Englewood, CO"
+        },
+        "Specifications": {
+            "Exterior color": " Black ",
+            "Interior color": "– ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   14–24    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "Automatic",
+            "Engine": "4L V-8 gasoline direct injection, DOHC, variable valve control,",
+            "VIN": " SCBGT3ZA4DC085385 ",
+            "Stock #": " DC085385 ",
+            "Mileage": " 25,242 mi. "
+        }
+    },
+    {
+        "Name": "2024 Mercedes-Benz Maybach S 580 4MATIC",
+        "Price": "$194,900",
+        "URL": "https://cars.com/vehicledetail/4be10b53-973f-4de5-811b-4b165ae90dca/",
+        "Mileage": "3,083 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Karma Westfield",
+            "Rating": "4.3",
+            "Review Count": "30 reviews",
+            "Location": "  Westfield, NJ"
+        },
+        "Specifications": {
+            "Exterior color": " Black ",
+            "Interior color": "– ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   15–26    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "Automatic",
+            "Engine": "AMG 4L V-8 gasoline direct injection, DOHC, variable valve contr",
+            "VIN": " W1K6X7GB9RA256558 ",
+            "Stock #": " RA256558C ",
+            "Mileage": " 3,083 mi. "
+        }
+    },
+    {
+        "Name": "2022 GMC Canyon Elevation",
+        "Price": "$34,995",
+        "URL": "https://cars.com/vehicledetail/198b6aea-4d33-4c1c-be88-f318bd9968c9/",
+        "Mileage": "22,480 mi.",
+        "Stock-Type": "GMC Certified",
+        "Dealer Details": {
+            "Name": "Country Club Motors",
+            "Rating": "4.3",
+            "Review Count": "173 reviews",
+            "Location": "  Oneonta, NY"
+        },
+        "Specifications": {
+            "Exterior color": " Cayenne Red Tintcoat ",
+            "Interior color": "Jet Black ",
+            "Drivetrain": "Four-wheel Drive ",
+            "MPG": "   17–24    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "Automatic",
+            "Engine": "3.6L V-6 gasoline direct injection, DOHC, variable valve control",
+            "VIN": " 1GTG6CEN3N1112571 ",
+            "Stock #": " 734629 ",
+            "Mileage": " 22,480 mi. "
+        }
+    },
+    {
+        "Name": "2021 Toyota Venza LE",
+        "Price": "$29,991",
+        "URL": "https://cars.com/vehicledetail/6e20586e-9a15-40ed-8c29-67780a02572e/",
+        "Mileage": "62,065 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "City Motor Company",
+            "Rating": null,
+            "Review Count": "89 reviews",
+            "Location": "  Great Falls, MT"
+        },
+        "Specifications": {
+            "Exterior color": " – ",
+            "Interior color": "Black ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   40–37    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Hybrid ",
+            "Transmission": "Automatic CVT",
+            "Engine": "2.5L I4 16V PDI DOHC Hybrid",
+            "VIN": " JTEAAAAH6MJ001810 ",
+            "Stock #": " T10841TA ",
+            "Mileage": " 62,065 mi. "
+        }
+    },
+    {
+        "Name": "2001 Ford Windstar LX",
+        "Price": "$5,642",
+        "URL": "https://cars.com/vehicledetail/2d07d0aa-e549-4558-94ea-8f354e04fb14/",
+        "Mileage": "95,136 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Jack Demmer Ford",
+            "Rating": "4.7",
+            "Review Count": "1,077 reviews",
+            "Location": "  Wayne, MI"
+        },
+        "Specifications": {
+            "Exterior color": " Light Sapphire Blue Clearcoat Metallic ",
+            "Interior color": "Medium Graphite ",
+            "Drivetrain": "Front-wheel Drive ",
+            "MPG": "   18–24    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "4-Speed Automatic",
+            "Engine": "3.8L V6 12V MPFI OHV",
+            "VIN": " 2FMZA51411BB95802 ",
+            "Stock #": " 19082A ",
+            "Mileage": " 95,136 mi. "
+        }
+    },
+    {
+        "Name": "2022 GMC Sierra 1500 Elevation",
+        "Price": "$46,990",
+        "URL": "https://cars.com/vehicledetail/66083013-7667-4510-b36b-b88e7e0685c2/",
+        "Mileage": "9,900 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "Cannon CDJR of Cleveland",
+            "Rating": null,
+            "Review Count": "0 reviews",
+            "Location": "  Cleveland, MS"
+        },
+        "Specifications": {
+            "Exterior color": " Onyx Black ",
+            "Interior color": "Jet Black ",
+            "Drivetrain": "Four-wheel Drive ",
+            "MPG": "   17–20    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "8-Speed Automatic",
+            "Engine": "2.7L I-4 gasoline direct injection, DOHC, variable valve control",
+            "VIN": " 3GTPUCEK3NG643069 ",
+            "Stock #": " PRC1768A ",
+            "Mileage": " 9,900 mi. "
+        }
+    },
+    {
+        "Name": "2017 Lexus NX 200t F Sport",
+        "Price": "$21,200",
+        "URL": "https://cars.com/vehicledetail/5c03815d-7caa-42cc-94d4-7b986b5ab043/",
+        "Mileage": "90,039 mi.",
+        "Stock-Type": "Used",
+        "Dealer Details": {
+            "Name": "MotorWorld Pre-Owned",
+            "Rating": "4.7",
+            "Review Count": "2,041 reviews",
+            "Location": "  Wilkes-Barre, PA"
+        },
+        "Specifications": {
+            "Exterior color": " Ultra White ",
+            "Interior color": "Sport ",
+            "Drivetrain": "All-wheel Drive ",
+            "MPG": "   22–27    Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.       ",
+            "Fuel type": "Gasoline ",
+            "Transmission": "6-Speed Automatic",
+            "Engine": "2.0L I4 16V PDI DOHC Turbo",
+            "VIN": " JTJBARBZ8H2101645 ",
+            "Stock #": " T48977B ",
+            "Mileage": " 90,039 mi. "
+        }
+    }
+]
