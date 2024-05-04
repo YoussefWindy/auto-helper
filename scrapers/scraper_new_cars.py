@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 def parse(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text,'lxml')
-    cars = soup.find_all('div',{'class':'vehicle-details'})
+    cars = soup.find_all('div',{'class':'vehicle-card-main js-gallery-click-card'})
     data = []
     for car in cars:
          rawHref = car.find('a')['href']
@@ -20,16 +20,21 @@ def parse(url):
          location = car.find(attrs={'class':'miles-from'}).text.replace('\n','')
          rating = car.find('span',{'class':'sds-rating__count'}).text if car.find('span',{'class':'sds-rating__count'}) else None
          stock_type = car.find('p',{'class':'stock-type'}).text
+         try:
+            img_url = car.find('img', {'class': 'vehicle-image'})['data-src']
+         except:
+            img_url = car.find('img', {'class': 'vehicle-image'})['src']
          newResponse = requests.get(href)
          newSoup = BeautifulSoup(newResponse.text,'lxml')
-         print('getting details of'+name)
+         print('getting details of'+ name)
          description = newSoup.find('dl',{'class':'fancy-description-list'})
          rawBasicKeys = description.find_all('dt')
          basicKeys = [key.text.replace('\n',' ') for key in rawBasicKeys]
          rawBasicValues = description.find_all('dd')
          basicValues = [value.text.replace('\n',' ') for value in rawBasicValues]
          basics = dict(zip(basicKeys,basicValues))
-
+         
+        
 
          data.append({
               "Name":name,
@@ -43,7 +48,8 @@ def parse(url):
                                 "Location":location
                                 },
                    
-              "Specifications":basics
+              "Specifications":basics,
+              "Image URL": img_url
          }
          )
     return data
@@ -60,8 +66,8 @@ def getArgs():
 def paginate(max_pages):
     carData = []
     for i in range(int(max_pages)):
-        url = "https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=&maximum_distance=500&mileage_max=&monthly_payment=&page_size=20&sort=best_match_desc&stock_type=used&year_max=&year_min=&zip="
-        scraped_data =  parse(url)
+        url = "https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=&maximum_distance=500&mileage_max=&monthly_payment=&page=" + str(i + 1) + "&page_size=20&sort=best_match_desc&stock_type=new&year_max=&year_min=&zip="
+        scraped_data = parse(url)
         print(url)
         for data in scraped_data:
             carData.append(data)
@@ -71,7 +77,7 @@ def paginate(max_pages):
 def writeData(carData):
     if carData:
         print(len(carData))
-        with open('cars.json','w',encoding='utf-8') as jsonfile:
+        with open('new_cars.json','w',encoding='utf-8') as jsonfile:
             json.dump(carData,jsonfile,indent=4,ensure_ascii=False)
     else:
         print("No data scraped")
