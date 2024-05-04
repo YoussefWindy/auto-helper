@@ -14,8 +14,29 @@ import { CharacterTextSplitter } from 'langchain/text_splitter';
 
 // Loading Data from JSON File
 const loader = new JSONLoader(
-    "src/data/states.json",
-    ["/state", "/code", "/nickname", "/website", "/admission_date", "/admission_number", "/capital_city", "/capital_url", "/population", "/population_rank", "/constitution_url", "/twitter_url"],
+    "src/data/scraper.json",
+    [
+        "/Name",
+        "/Price",
+        "/URL",
+        "/Mileage",
+        "/Stock-Type",
+        "/Dealer Details/Name",
+        "/Dealer Details/Rating",
+        "/Dealer Details/Review Count",
+        "/Dealer Details/Location",
+        "/Specifications/Exterior color",
+        "/Specifications/Interior color",
+        "/Specifications/Drivetrain",
+        "/Specifications/MPG",
+        "/Specifications/Fuel type",
+        "/Specifications/Transmission",
+        "/Specifications/Engine",
+        "/Specifications/VIN",
+        "/Specifications/Stock #",
+        "/Specifications/Mileage",
+        "/Image URL"
+    ]
 );
 
 export const dynamic = 'force-dynamic'
