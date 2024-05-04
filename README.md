@@ -14,4 +14,4 @@ See here:
 
 ## Acknowledgments
 
-  - NextJS RAG LangChain application by Dave Gary: [source](https://github.com/gitdagray/nextjs-rag-langchain)
+  - [NextJS RAG LangChain application](https://github.com/gitdagray/nextjs-rag-langchain) by Dave Gary
