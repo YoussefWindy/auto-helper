@@ -66,7 +66,8 @@ def getArgs():
 def paginate(max_pages):
     carData = []
     for i in range(int(max_pages)):
-        url = "https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=&maximum_distance=500&mileage_max=&monthly_payment=&page_size=20&sort=best_match_desc&stock_type=new&year_max=&year_min=&zip="
+        a = str(i + 1)
+        url = "https://www.cars.com/shopping/results/?dealer_id=&keyword=&list_price_max=&list_price_min=&makes[]=&maximum_distance=500&mileage_max=&monthly_payment=&page=" + a + "&page_size=20&sort=best_match_desc&stock_type=used&year_max=&year_min=&zip="
         scraped_data = parse(url)
         print(url)
         for data in scraped_data:
