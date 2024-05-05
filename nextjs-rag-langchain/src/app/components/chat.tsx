@@ -26,6 +26,12 @@ export function Chat() {
 
   const popularCarsData = [
     {
+      Name: "2024 Cadillac LYRIQ SPORT",
+      Price: "$67,915",
+      URL: "https://cars.com/vehicledetail/ca9c90df-a081-42f1-93a8-df4ee0d91ba1/",
+      "Image URL": "https://www.cars.com/i/large/in/v2/07f8b240-d46b-569a-87d0-011fb154cbff/4f6473fe-88f1-4623-b50e-3a884395254e/snBs1HUss5OpOwV_geZy4O0OryM.jpg",
+    },
+    {
       Name: "2024 Toyota RAV4 Hybrid SE",
       Price: "$37,375",
       URL: "https://cars.com/vehicledetail/4abe9d12-111a-4fb4-bf49-d12427870083/",
@@ -34,7 +40,7 @@ export function Chat() {
     },
     {
       Name: "2024 Jeep Wagoneer L Series II",
-      Price: "$70,000",
+      Price: "$74,210",
       URL: "https://cars.com/vehicledetail/e7ee36f6-c49f-4478-85e8-de5388261d33/",
       "Image URL":
         "https://www.cars.com/i/large/in/v2/3df6a95b-4179-51f2-8802-2c8750cc3977/6d5abb58-070e-4af2-8de7-60e43cb1aab4/_k1exIfRtm0Bl5EioD206jOXT-c.jpg",
@@ -147,11 +153,11 @@ export function Chat() {
                   <button
                     onClick={handlePreviousCar}
                     className="bg-blue-500 text-white p-6 rounded-full focus:outline-none"
-                  ></button>
+                  >Previous</button>
                   <button
                     onClick={handleNextCar}
                     className="bg-blue-500 text-white p-6 rounded-full focus:outline-none"
-                  ></button>
+                  >Next</button>
                 </div>
               </div>
             </div>
