@@ -6,38 +6,9 @@ import {
 import { ChatOpenAI } from '@langchain/openai';
 import { PromptTemplate } from '@langchain/core/prompts';
 import { HttpResponseOutputParser } from 'langchain/output_parsers';
-
-import { JSONLoader } from "langchain/document_loaders/fs/json";
 import { RunnableSequence } from '@langchain/core/runnables'
-import { formatDocumentsAsString } from 'langchain/util/document';
-import { CharacterTextSplitter } from 'langchain/text_splitter';
-
-// Loading Data from JSON File
-const loader = new JSONLoader(
-    "src/data/scraper.json",
-    [
-        "/Name",
-        "/Price",
-        "/URL",
-        "/Mileage",
-        "/Stock-Type",
-        "/Dealer Details/Name",
-        "/Dealer Details/Rating",
-        "/Dealer Details/Review Count",
-        "/Dealer Details/Location",
-        "/Specifications/Exterior color",
-        "/Specifications/Interior color",
-        "/Specifications/Drivetrain",
-        "/Specifications/MPG",
-        "/Specifications/Fuel type",
-        "/Specifications/Transmission",
-        "/Specifications/Engine",
-        "/Specifications/VIN",
-        "/Specifications/Stock #",
-        "/Specifications/Mileage",
-        "/Image URL"
-    ]
-);
+import { OpenAIEmbeddings } from '@langchain/openai'; 
+import { Pinecone } from '@pinecone-database/pinecone';
 
 export const dynamic = 'force-dynamic'
 
@@ -49,7 +20,7 @@ const formatMessage = (message: VercelChatMessage) => {
     return `${message.role}: ${message.content}`;
 };
 
-const TEMPLATE = `Answer the user's questions based only on the following context. If the answer is not in the context, reply politely that you do not have that information available.:
+const TEMPLATE = `Answer the user's questions if and only if the user asks about cars. If so, answer using the context given, the context will always contain information about 3 cars in a json format. If the answer is not in the context, reply politely that you do not have that information available.:
 ==============================
 Context: {context}
 ==============================
@@ -58,18 +29,32 @@ Current conversation: {chat_history}
 user: {question}
 assistant:`;
 
+// Pinecone Client
+const pc = new Pinecone({
+    apiKey: process.env.PINECONE_API_KEY!,
+});
+// Retrieve Pineccone Index
+const index = pc.Index("carindex")
 
 export async function POST(req: Request) {
     try {
         // Extract the `messages` from the body of the request
         const { messages } = await req.json();
-
         const formattedPreviousMessages = messages.slice(0, -1).map(formatMessage);
-
         const currentMessageContent = messages[messages.length - 1].content;
 
-        const docs = await loader.load();
+        // Embed the request/query
+        const queryEmbedding = await new OpenAIEmbeddings().embedQuery(currentMessageContent)
 
+        let queryResponse = await index.query({
+                topK: 3,
+                vector: queryEmbedding,
+                includeMetadata: true,
+                includeValues: true,
+        });
+
+        // Format the retrieved documents to be used as context
+        const docsContext = queryResponse.matches.map(match => match.metadata?.text).join("\n");
         const prompt = PromptTemplate.fromTemplate(TEMPLATE);
 
         const model = new ChatOpenAI({
@@ -87,7 +72,7 @@ export async function POST(req: Request) {
             {
                 question: (input) => input.question,
                 chat_history: (input) => input.chat_history,
-                context: () => formatDocumentsAsString(docs),
+                context: () => docsContext,
             },
             prompt,
             model,
