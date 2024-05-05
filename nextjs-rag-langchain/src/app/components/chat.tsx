@@ -8,7 +8,7 @@ import { useRef, useEffect, useState } from "react";
 
 export function Chat() {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
-    api: "api/chat_wrapper",
+    api: "api/final",
     onError: (e) => {
       console.log(e);
     },
@@ -41,38 +41,6 @@ export function Chat() {
     },
   ];
 
-  // idk leave for now
-  {
-    /* const highestRatedCar = {
-    Name: "2024 Toyota RAV4 Hybrid SE",
-    Price: "$37,375",
-    URL: "https://cars.com/vehicledetail/4abe9d12-111a-4fb4-bf49-d12427870083/",
-    Mileage: null,
-    "Stock-Type": "New",
-    "Dealer Details": {
-      Name: "Modern Toyota of Asheboro",
-      Rating: "4.9",
-      "Review Count": "730 reviews",
-      Location: "Asheboro, NC",
-    },
-    Specifications: {
-      "Exterior color": "Silver Sky Metallic",
-      "Interior color": "Black",
-      Drivetrain: "All-wheel Drive",
-      MPG: "41–38 Based on EPA mileage ratings. Use for comparison purposes only. Actual mileage will vary depending on driving conditions, driving habits, vehicle maintenance, and other factors.",
-      "Fuel type": "Hybrid",
-      Transmission: "Automatic",
-      Engine:
-        "Dynamic Force 2.5L I-4 port/direct injection, DOHC, VVT-i variab",
-      VIN: "JTM16RFV7RD131782",
-      "Stock #": "16N3425",
-      Mileage: "6 mi.",
-    },
-    "Image URL":
-      "https://www.cars.com/i/large/in/v2/3239affa-3db8-4139-ac0a-1ce11e5a60fc/66c62d5b-d972-45a3-97c3-7e4a1ca8fc6c/eUhzEKQ7y7fKR8oKHJw5qeH9iO4.jpg",
-  }; */
-  }
-
   useEffect(() => {
     const domNode = chatParent.current;
     if (domNode) {
@@ -101,9 +69,15 @@ export function Chat() {
       {/* Header */}
       <header className="p-4 border-b w-full flex justify-start items-center">
         <h1 className="text-2xl font-bold">Auto Helper</h1>
-        <Image src="/logo.png" alt="Logo" width={35} height={35} className="ml-1" />
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={35}
+          height={35}
+          className="ml-1"
+        />
       </header>
-      <div className="flex-grow grid grid-cols-2 gap-8 w-full mx-auto relative">
+      <div className="flex-grow grid grid-cols-2 gap-8 w-full overflow-y-auto mx-auto relative">
         {/* Chat Interface */}
         <section className="flex flex-col gap-4 overflow-y-auto relative">
           <ul ref={chatParent} className="flex-grow bg-muted/50 rounded-lg p-4">
@@ -139,7 +113,7 @@ export function Chat() {
               alt="Image"
               width={300}
               height={300}
-              style={{ opacity: 0.2 }}
+              style={{ opacity: 0.07 }}
             />
           </div>
         </section>
@@ -148,7 +122,7 @@ export function Chat() {
           {/* Popular car details */}
           {popularCars.length > 0 && (
             <div>
-              <h2 className="text-xl font-semibold">Goon</h2>
+              <h2 className="text-xl font-semibold">Our recommendations</h2>
               <div className="mt-4">
                 <h3 className="text-lg font-medium">
                   {popularCars[currentCarIndex].Name}
