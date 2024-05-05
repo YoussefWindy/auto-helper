@@ -10,8 +10,6 @@ import { RunnableSequence } from '@langchain/core/runnables'
 import { OpenAIEmbeddings } from '@langchain/openai'; 
 import { Pinecone } from '@pinecone-database/pinecone';
 
-export const dynamic = 'force-dynamic'
-
 /**
  * Basic memory formatter that stringifies and passes
  * message history directly into the model.
@@ -20,7 +18,9 @@ const formatMessage = (message: VercelChatMessage) => {
     return `${message.role}: ${message.content}`;
 };
 
-const TEMPLATE = `Answer the user's questions if and only if the user asks about cars. If so, answer using the context given, the context will always contain information about 3 cars in a json format. If the answer is not in the context, reply politely that you do not have that information available.:
+const TEMPLATE = `Answer the user's questions if and only if the user asks about terms related to cars. You have chat_history
+holding any information on previous similar cars If you answer, your answer must use the context or chat history given
+If the answer is not in the context, reply politely that you do not have that information available. 
 ==============================
 Context: {context}
 ==============================
@@ -35,6 +35,9 @@ const pc = new Pinecone({
 });
 // Retrieve Pineccone Index
 const index = pc.Index("carindex")
+
+// Historical context (Context seen so far)
+const historicalContextSet = new Set();
 
 export async function POST(req: Request) {
     try {
@@ -54,13 +57,28 @@ export async function POST(req: Request) {
         });
 
         // Format the retrieved documents to be used as context
-        const docsContext = queryResponse.matches.map(match => match.metadata?.text).join("\n");
+        const newDocsContext = queryResponse.matches.map(match => match.metadata?.text).join("\n");
+
+        let cleanedString = "";
+        for (let char of newDocsContext) {
+            // Check if the character is alphanumeric or a space
+            if (char.match(/[a-zA-Z0-9: ]/)) {
+                cleanedString += char;
+            }
+        }
+
+        // Add new unique context to historical context
+        historicalContextSet.add(cleanedString);
+         
+        // Convert array into string
+        const allContexts = Array.from(historicalContextSet).join("\n\n");
+
         const prompt = PromptTemplate.fromTemplate(TEMPLATE);
 
         const model = new ChatOpenAI({
             apiKey: process.env.OPENAI_API_KEY!,
-            model: 'gpt-3.5-turbo',
-            temperature: 0,
+            model: 'gpt-4',
+            temperature: 0.0,
             streaming: true,
             verbose: true,
         });
@@ -72,7 +90,7 @@ export async function POST(req: Request) {
             {
                 question: (input) => input.question,
                 chat_history: (input) => input.chat_history,
-                context: () => docsContext,
+                context: () => allContexts,
             },
             prompt,
             model,
