@@ -15,3 +15,4 @@ See here:
 ## Acknowledgments
 
   - [NextJS RAG LangChain framework](https://github.com/gitdagray/nextjs-rag-langchain) by Dave Gary
+  - Coding help from [Alex Ungureanu](https://github.com/alexu8007)
