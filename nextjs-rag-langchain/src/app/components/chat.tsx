@@ -14,8 +14,8 @@ export function Chat() {
     },
   });
   const chatParent = useRef<HTMLUListElement>(null);
-  // Set initial view to highest rated cars
-  const [currentView, setCurrentView] = useState("highestRated");
+  const [popularCars, setPopularCars] = useState([]); // Array to store popular cars
+  const [currentCarIndex, setCurrentCarIndex] = useState(0); // Index of the current car being displayed
 
   useEffect(() => {
     const domNode = chatParent.current;
@@ -24,7 +24,26 @@ export function Chat() {
     }
   });
 
-  const highestRatedCar = {
+  const popularCarsData = [
+    {
+      Name: "2024 Toyota RAV4 Hybrid SE",
+      Price: "$37,375",
+      URL: "https://cars.com/vehicledetail/4abe9d12-111a-4fb4-bf49-d12427870083/",
+      "Image URL":
+        "https://www.cars.com/i/large/in/v2/3239affa-3db8-4139-ac0a-1ce11e5a60fc/66c62d5b-d972-45a3-97c3-7e4a1ca8fc6c/eUhzEKQ7y7fKR8oKHJw5qeH9iO4.jpg",
+    },
+    {
+      Name: "2024 Jeep Wagoneer L Series II",
+      Price: "$70,000",
+      URL: "https://cars.com/vehicledetail/e7ee36f6-c49f-4478-85e8-de5388261d33/",
+      "Image URL":
+        "https://www.cars.com/i/large/in/v2/3df6a95b-4179-51f2-8802-2c8750cc3977/6d5abb58-070e-4af2-8de7-60e43cb1aab4/_k1exIfRtm0Bl5EioD206jOXT-c.jpg",
+    },
+  ];
+
+  // idk leave for now
+  {
+    /* const highestRatedCar = {
     Name: "2024 Toyota RAV4 Hybrid SE",
     Price: "$37,375",
     URL: "https://cars.com/vehicledetail/4abe9d12-111a-4fb4-bf49-d12427870083/",
@@ -51,33 +70,30 @@ export function Chat() {
     },
     "Image URL":
       "https://www.cars.com/i/large/in/v2/3239affa-3db8-4139-ac0a-1ce11e5a60fc/66c62d5b-d972-45a3-97c3-7e4a1ca8fc6c/eUhzEKQ7y7fKR8oKHJw5qeH9iO4.jpg",
-  };
-
-  const [closestMatches, setClosestMatches] = useState([]);
-
-  const fetchClosestMatches = async () => {
-    {
-      /* Implement your logic to search for closest matches
-    and fetch additional details and images
-    For demonstration purposes, let's assume closestMatchesData
-  is an array of objects containing details of closest matches */
-    }
-
-    setClosestMatches(closestMatchesData);
-  };
+  }; */
+  }
 
   useEffect(() => {
-    if (currentView === "highestRated") {
-      // Fetch highest-rated cars when the component mounts
-      fetchHighestRatedCars();
-    } else {
-      fetchClosestMatches(); // Fetch closest matches when the view changes
+    const domNode = chatParent.current;
+    if (domNode) {
+      domNode.scrollTop = domNode.scrollHeight;
     }
-  }, [currentView]); // Re-run effect when currentView changes
+  });
 
-  const fetchHighestRatedCars = async () => {
-    // Set highest rated car data directly
-    setClosestMatches([highestRatedCar]);
+  useEffect(() => {
+    setPopularCars(popularCarsData);
+  }, []);
+
+  // Function to go to next car
+  const handleNextCar = () => {
+    setCurrentCarIndex((prevIndex) => (prevIndex + 1) % popularCars.length);
+  };
+
+  // Function to go to previous car
+  const handlePreviousCar = () => {
+    setCurrentCarIndex((prevIndex) =>
+      prevIndex === 0 ? popularCars.length - 1 : prevIndex - 1
+    );
   };
 
   return (
@@ -85,7 +101,7 @@ export function Chat() {
       {/* Header */}
       <header className="p-4 border-b w-full flex justify-start items-center">
         <h1 className="text-2xl font-bold">Auto Helper</h1>
-        <Image src="/logo.png" width={35} height={35} className="ml-1" />
+        <Image src="/logo.png" alt="Logo" width={35} height={35} className="ml-1" />
       </header>
       <div className="flex-grow grid grid-cols-2 gap-8 w-full mx-auto relative">
         {/* Chat Interface */}
@@ -129,50 +145,42 @@ export function Chat() {
         </section>
         {/* Display Cars */}
         <section className="bg-gray-100 p-4 rounded-lg">
-          {currentView === "highestRated" ? (
-            <>
-              <h2 className="text-xl font-semibold">Highest Rated Cars</h2>
+          {/* Popular car details */}
+          {popularCars.length > 0 && (
+            <div>
+              <h2 className="text-xl font-semibold">Goon</h2>
               <div className="mt-4">
-                <h3 className="text-lg font-medium">{highestRatedCar.Name}</h3>
+                <h3 className="text-lg font-medium">
+                  {popularCars[currentCarIndex].Name}
+                </h3>
                 <img
-                  src={highestRatedCar["Image URL"]}
-                  alt={highestRatedCar.Name}
+                  src={popularCars[currentCarIndex]["Image URL"]}
+                  alt={popularCars[currentCarIndex].Name}
                   className="mt-2 w-full"
                 />
-                <p className="mt-2">{highestRatedCar.Price}</p>
+                <p className="mt-2">{popularCars[currentCarIndex].Price}</p>
                 {/* Render additional details */}
                 <a
-                  href={highestRatedCar.URL}
+                  href={popularCars[currentCarIndex].URL}
                   className="text-blue-600"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   View Details
                 </a>
-              </div>
-              <Button
-                onClick={() => setCurrentView("closestMatches")}
-                className="mt-4"
-              >
-                View Closest Matches
-              </Button>
-            </>
-          ) : (
-            <>
-              <h2 className="text-xl font-semibold">Closest Matches</h2>
-              {/* Render closest matches */}
-              {closestMatches.map((match, index) => (
-                <div key={index} className="mt-4">
-                  {/* Render closest match details */}
+                {/* Buttons for navigation */}
+                <div className="mt-4 flex justify-between items-center">
+                  <button
+                    onClick={handlePreviousCar}
+                    className="bg-blue-500 text-white p-6 rounded-full focus:outline-none"
+                  ></button>
+                  <button
+                    onClick={handleNextCar}
+                    className="bg-blue-500 text-white p-6 rounded-full focus:outline-none"
+                  ></button>
                 </div>
-              ))}
-              <Button
-                onClick={() => setCurrentView("highestRated")}
-                className="mt-4"
-              >
-                View Highest Rated Cars
-              </Button>
-            </>
+              </div>
+            </div>
           )}
         </section>
       </div>
